@@ -8,28 +8,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* 1. Force the Whimsical Font for regular headers (Purple) */
-        h1, h2, h3, h4 { 
-            font-family: 'Fredoka', 'Georgia', serif !important; 
-            color: #7E4E9E !important; 
-        }
-
-        /* Keep the Book Title GOLD so it's visible on the purple cover! */
-        .mock-title {
-            font-family: 'Fredoka', 'Georgia', serif !important; 
-            color: #F4D348 !important; 
-            font-size: 1.8em;
-            font-weight: bold;
-            line-height: 1.2;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        /* 2. The Morphing Blob Animation (Physical Div) */
+        /* The morphing accent remains a visual signature behind the book. */
         .morphing-blob {
             position: absolute;
             top: 50%;
@@ -100,6 +83,11 @@
             0% { transform: translateY(0px) scaleY(1); }
             50% { transform: translateY(-8px) scaleY(1.1); }
             100% { transform: translateY(0px) scaleY(1); }
+        }
+
+        @media (max-width: 767px) {
+            .morphing-blob { width: min(400px, 88vw) !important; height: min(400px, 88vw) !important; }
+            .blob-hero, .blob-cta { left: 50% !important; width: 86vw !important; height: 86vw !important; }
         }
     </style>
 </head>

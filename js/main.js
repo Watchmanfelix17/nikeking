@@ -49,6 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
     // --- 3. CART FORM TO WHATSAPP LOGIC --- //
     const orderForm = document.getElementById('orderForm');
     
