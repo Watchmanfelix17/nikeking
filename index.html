@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nike King is a Christian writer and storyteller based in Abuja. Discover 'A Baby on a Mission', a book for parents and children with unconventional beginnings.">
+    <title>Nike King | Author & Christian Storyteller in Abuja</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 1. Force the Whimsical Font for regular headers (Purple) */
+        h1, h2, h3, h4 { 
+            font-family: 'Fredoka', 'Georgia', serif !important; 
+            color: #7E4E9E !important; 
+        }
+
+        /* Keep the Book Title GOLD so it's visible on the purple cover! */
+        .mock-title {
+            font-family: 'Fredoka', 'Georgia', serif !important; 
+            color: #F4D348 !important; 
+            font-size: 1.8em;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* 2. The Morphing Blob Animation (Physical Div) */
+        .morphing-blob {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px !important;  /* Increased from 280px so it spills out past the book */
+            height: 400px !important; /* Increased from 280px */
+            background-color: #F4D348 !important; /* Accent Gold */
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            z-index: 0 !important; 
+            opacity: 0.6 !important; /* Bumped up from 0.3 so it's clearly visible */
+            animation: morph 8s ease-in-out infinite;
+            pointer-events: none; 
+            display: block !important;
+        }
+        /* Hero Section Blob Adjustments */
+        .blob-hero {
+            top: 20% !important;
+            left: 80% !important;
+            width: 500px !important;
+            height: 500px !important;
+            opacity: 0.15 !important; /* Lighter so text is easy to read */
+            z-index: -1 !important; /* Pushes it strictly to the background */
+        }
+
+        /* CTA Section Blob Adjustments */
+        .blob-cta {
+            top: 50% !important;
+            left: 15% !important;
+            width: 600px !important;
+            height: 600px !important;
+            opacity: 0.15 !important;
+            z-index: -1 !important;
+        }
+
+        @keyframes morph {
+            0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+            67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+        }
+
+        /* Ensure the book stays in front of the blob */
+        .book-mockup {
+            position: relative;
+            z-index: 10 !important;
+        }
+
+        @keyframes morph {
+            0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+            67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+        }
+
+        /* 3. Wave Divider Reset */
+        /* Animated Floating Wave with Crisp Edge */
+        .wave-divider svg.floating-wave {
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 90px;
+            animation: floatWave 6s ease-in-out infinite;
+            transform-origin: top; 
+            /* NEW: Adds a crisp shadow to eliminate blurry blending */
+            filter: drop-shadow(0px 6px 4px rgba(126, 78, 158, 0.15));
+        }
+
+        /* Custom Keyframe for the Picture Board */
+        @keyframes floatWave {
+            0% { transform: translateY(0px) scaleY(1); }
+            50% { transform: translateY(-8px) scaleY(1.1); }
+            100% { transform: translateY(0px) scaleY(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Contact Button -->
+    <a href="https://wa.me/2347060505413?text=Hi%2C%20I%20found%20your%20website%20and%20I'd%20like%20to%20enquire%20about%20your%20services." class="btn-whatsapp sticky-btn">Chat with us on WhatsApp</a>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="reveal">
+            <!-- Ensure image.png is in your root or update the path -->
+            <img src="assets/image.png" alt="Nike King Logo" class="brand-logo float-anim">
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#book">The Book</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+            </nav>
+        </header>
+
+        <!-- Hero / The Hook -->
+        <section id="home" class="sales-copy reveal">
+            <div class="morphing-blob blob-hero"></div>
+            <h2 class="hero-headline">Are you raising a child born outside the traditional narrative?</h2>
+            <p class="subtitle">Or maybe you're that child—growing up knowing your story was different. Either way, you've carried questions.</p>
+            
+            <div class="problem-box">
+                <h4>The Problem</h4>
+                <p>Maybe you've wondered: Is my child an accident? Does their unconventional beginning mean they're somehow less chosen? How do I help them understand their worth when the world keeps telling them their birth story doesn't fit?</p>
+                <p class="standalone-question">Or perhaps you've asked yourself: Am I a mistake? Is there a place for me in God's design?</p>
+            </div>
+            
+            <h4>The Guide</h4>
+            <p>I'm Nike King, and I understand this question intimately. I've asked it. I've lived it. Years ago, I knelt in prayer, overwhelmed by the weight of this very concern, when something shifted in me—a knowing that God doesn't make accidents. Only then did I realize: I needed to write this book. Not just for children who don't fit the mold, but for every parent who wonders if their child's story is still part of God's plan.</p>
+        </section>
+
+        <!-- Product Section (The Plan) -->
+        <section id="book" class="product-card reveal">
+            <div class="product-layout">
+                
+                <!-- Visual Anchor: The Book Cover -->
+                <div class="product-image" style="position: relative; z-index: 1;">
+    
+                <!-- NEW: Physical Blob Element -->
+                <div class="morphing-blob"></div>
+
+                <div class="book-mockup float-anim" style="position: relative; z-index: 10;">
+                    <span class="mock-title">A Baby on a Mission</span>
+                    <span class="mock-author">By Nike King</span>
+                </div>
+            </div>
+
+                <!-- Product Details -->
+                <div class="product-details">
+                    <h4 class="product-kicker">The Plan</h4>
+                    <h2>A Baby on a Mission</h2>
+                    
+                    <p>A collection of biblical stories—real people with unconventional beginnings. Moses grew up in the palace away from his biological parents. Jephthah was born by a different woman. Jesus himself was born in unexpected circumstances. Yet each of them? Chosen. Purposed. Central to God's plan.</p>
+                    
+                    <p><strong>This book shows your child (and you) that:</strong></p>
+                    <ul class="check-list">
+                        <li>Your birth story is not a disqualification—it's part of your testimony</li>
+                        <li>Before the foundations of the world were laid, God already knew and loved you</li>
+                        <li>Your circumstances don't define your destiny; your true identity is found only in Christ.</li>
+                    </ul>
+                    
+                    <div class="price-box">
+                        <span class="price-main">₦15,500</span>
+                        <span class="price-alt">/ $10.99</span>
+                    </div>
+                    
+                    <!-- Look Inside Snippet CTA -->
+                    <div class="look-inside-container">
+                        <button class="btn-look-inside" id="openModalBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.156 3.138.525v8.5c-.68-.369-1.808-.659-3.138-.525C3.154 10.561 1.885 10.96 1 11.33V2.828zm7.5-.141c.68-.369 1.808-.659 3.138-.525 1.234.124 2.503.523 3.388.893v8.5c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.156-3.138.525v-8.5zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                            Look Inside: Read a Snippet
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rolling Wave Section Divider -->
+        <div class="wave-divider reveal" style="margin-bottom: 0; margin-top: 80px; position: relative; z-index: 2;">
+            <svg class="floating-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <!-- Crisper, darker purple fill for high visibility -->
+                <path fill="#C2A3D1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,42.7C1120,32,1280,32,1360,32L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+            </svg>
+        </div>
+
+        <!-- THE CALL TO ACTION -->
+        <section id="actions" class="reveal">
+            <div class="morphing-blob blob-cta"></div>
+            <div style="text-align: center; color: #F4D348; margin-bottom: -15px; position: relative; z-index: 2;">
+                <svg class="float-anim" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
+                </svg>
+            </div>
+            <h2 style="text-align: center; margin-bottom: 30px; position: relative; z-index: 2;">The Call to Action</h2>
+            <div class="cta-grid">
+                
+                <!-- 1. Get the book (Cart/Lead Form) -->
+                <div class="cta-card">
+                    <span class="cta-number">1</span>
+                    <h4>Get the book</h4>
+                    <p>Order <em>A Baby on a Mission</em> today and start reading these stories with your child (or for yourself).</p>
+                    
+                    <form id="orderForm" class="order-form">
+                        <input type="text" id="orderName" placeholder="Full Name" required class="form-input">
+                        <input type="email" id="orderEmail" placeholder="Email Address" required class="form-input">
+                        <button type="submit" class="btn-primary w-full pulse-anim">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16" style="display: inline; margin-right: 5px;">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                            </svg>
+                           Order Now
+                        </button>
+                    </form>
+                </div>
+
+                <!-- 2. Share your story -->
+                <div class="cta-card">
+                    <span class="cta-number">2</span>
+                    <h4>Share your story</h4>
+                    <p>After reading, we want to hear: How has this book shifted your perspective? Send us your story.</p>
+                    <a href="https://wa.me/2347060505413?text=Hi%2C%20I'd%20like%20to%20share%20my%20story%20after%20reading%20the%20book!" class="btn-whatsapp outline">Share on WhatsApp</a>
+                </div>
+
+                <!-- 3. Join our community -->
+                <div class="cta-card">
+                    <span class="cta-number">3</span>
+                    <h4>Join our community</h4>
+                    <p>Become part of a space where we pray for one another, celebrate journeys, and remind each other daily: You are chosen.</p>
+                    <a href="https://wa.me/2347060505413?text=Hi%2C%20I'd%20like%20to%20join%20the%20A%20Baby%20on%20a%20Mission%20community." class="btn-whatsapp outline">Join on WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT YOU'RE AVOIDING / GAINING -->
+        <section id="benefits" class="reveal" style="margin-top: 60px;">
+            <div class="benefits-grid">
+                <div class="benefit-card float-anim" style="animation-delay: 0.1s;">
+                    <h4>What You're Avoiding</h4>
+                    <p>A lifetime of wondering. A child growing up carrying shame about where they came from. Missing the revelation that their beginning was always part of something greater. We are in the middle of an ancient story.</p>
+                </div>
+                <div class="benefit-card float-anim" style="animation-delay: 0.3s;">
+                    <h4>What You're Gaining</h4>
+                    <p>A new lens. A child who knows, bone-deep, that they were written into God's story before time began. A family that celebrates their narrative instead of hiding it. A community that gets it. And the freedom to live as the chosen, purposed person you were always meant to be.</p>
+                    <p class="highlight-text"><em>*All things are working together for your good.*</em></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="reveal" style="margin-top: 80px;">
+            <h2>About the Author</h2>
+            <p>Nike King (Abba's Daughter) is a Christian writer, storyteller, and lover of God's Word whose greatest passion is helping people see Jesus and discover the Father's heart.</p>
+            <p>She believes that true identity is not found in our circumstances, family background, successes, failures, or even our personal experiences, but in the truth of God's Word. Through Scripture and being planted in her local church Caleb Dada Ministries, the Lord has continually opened her eyes to see her own journey through the lens of redemption, grace, and purpose, revealing a God who is far kinder, more loving, and more intentional than many people realize.</p>
+            <p>Her desire is to help children and adults alike develop the right perception of God—not through human opinions or painful experiences, but through the revelation of Jesus Christ and the truth of His Word. She is passionate about reminding people that they are seen, known, loved, and chosen by God, and that every life carries divine purpose.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="reveal">
+            <hr class="footer-hr">
+            <p><strong>Nike King</strong><br>
+            Service Area: International (Based in Abuja)</p>
+            
+            <div class="contact-links">
+                <!-- WhatsApp Link -->
+                <a href="https://wa.me/2347060505413" class="contact-a">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.534a6.6 6.6 0 0 1-3.273-.893l-.235-.14-2.433.637.644-2.373-.153-.24a6.5 6.5 0 0 1-1.02-3.692c.002-3.593 2.924-6.515 6.518-6.515 1.74 0 3.374.677 4.605 1.909a6.5 6.5 0 0 1 1.907 4.606c-.002 3.592-2.924 6.515-6.518 6.515"/>
+                    </svg>
+                    +234 706 050 5413
+                </a>
+
+                <!-- Email Link -->
+                <a href="mailto:sandra.akingbala@gmail.com" class="contact-a">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                    </svg>
+                    sandra.akingbala@gmail.com
+                </a>
+            </div>
+
+            <!-- Signature Divider -->
+            <div class="flex items-center justify-center gap-3 signature-divider">
+                <span class="w-8 h-px bg-slate-700 sig-line"></span>
+                <span class="text-xs uppercase tracking-widest text-slate-500 sig-text">
+                    Crafted with precision
+                </span>
+                <span class="w-8 h-px bg-slate-700 sig-line"></span>
+            </div>
+
+            <!-- ImpactDev Signature -->
+            <p class="text-xs text-slate-500 tracking-wide sig-brand">
+                Website by
+                <span class="font-serif text-slate-300 tracking-normal ml-1 sig-impactdev">
+                    ImpactDev
+                </span>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Look Inside Modal Window -->
+    <div id="lookInsideModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3 style="margin-top: 0;">Look Inside: A Baby on a Mission</h3>
+            <div class="modal-body">
+                <p><em>Excerpt from Chapter 1...</em></p>
+                <p>Long before you took your first breath, God was already weaving the tapestry of your life. The world might look at unconventional beginnings and see a mistake, but heaven looks down and sees a meticulously crafted plan.</p>
+                <p>Consider Moses. Born into a time of death, placed in a basket on a dangerous river, and raised by the very family that oppressed his people. To the world, his beginning was chaotic. To God, it was the precise setup for deliverance...</p>
+                <!-- Add more snippet content here in the future -->
+            </div>
+            <a href="#actions" class="btn-primary w-full" style="display: block; text-align: center; text-decoration: none; margin-top: 20px;" onclick="document.getElementById('lookInsideModal').style.display='none';">Get the Full Book</a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
