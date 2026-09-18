@@ -38,7 +38,7 @@ h1, h2, h3, h4, .mock-title {
 p { margin-bottom: 20px; }
 
 .container {
-    padding: 0 28px 100px;
+    padding: 0 20px 60px;
     max-width: 1080px;
     width: 100%;
     margin: auto; 
@@ -96,8 +96,24 @@ nav a:hover { color: var(--accent-gold); }
 .mock-author { font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; }
 
 /* Features & Pricing */
-.check-list { text-align: left; margin-bottom: 20px; padding-left: 20px; }
-.check-list li { margin-bottom: 10px; position: relative; list-style-type: '✨ '; }
+.check-list {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 0;
+    list-style: none;
+}
+.check-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.check-list li i {
+    color: var(--accent-gold);
+    font-size: 1.2em;
+    line-height: 1.4;
+    flex-shrink: 0;
+}
 .price-box { margin: 20px 0; padding-top: 15px; border-top: 1px solid rgba(126, 78, 158, 0.1); }
 .price-main { font-size: 1.8em; font-weight: bold; color: var(--primary-purple); }
 .price-alt { font-size: 1.1em; color: #64748b; margin-left: 8px; }
@@ -127,8 +143,8 @@ nav a:hover { color: var(--accent-gold); }
 @keyframes slideDown { from { transform: translateY(-30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
 /* Section Dividers */
-.wave-divider { position: relative; width: 100%; overflow: hidden; line-height: 0; margin: 40px 0; }
-.wave-divider svg { display: block; width: calc(100% + 1.3px); height: 60px; }
+.wave-divider { position: relative; width: 100%; overflow: hidden; line-height: 0; margin: 40px 0; z-index: 0 !important; pointer-events: none; }
+.wave-divider svg { display: block; width: calc(100% + 1.3px); height: 60px; position: relative; z-index: 0 !important; pointer-events: none; }
 
 /* CTAs & Forms */
 .cta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
@@ -184,15 +200,18 @@ nav a:hover { color: var(--accent-gold); }
 @keyframes morph { 0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; } 34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; } 67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; } }
 
 /* Footer / Signature Box */
-footer { text-align: center; font-size: 0.9em; margin-top: 60px; color: var(--primary-purple); padding-bottom: 40px; }
+footer { text-align: center; font-size: 0.9em; margin-top: 60px; color: var(--primary-purple); padding-bottom: 10px; }
 .footer-hr { border: none; border-top: 3px solid var(--accent-gold); width: 50px; margin: 0 auto 20px auto; border-radius: 5px; }
-.contact-links { display: flex; flex-direction: column; align-items: center; gap: 15px; margin: 25px 0; }
+.contact-links { display: flex; flex-direction: column; align-items: center; gap: 15px; margin: 0; }
 .contact-a { color: var(--primary-purple); text-decoration: none; display: flex; align-items: center; gap: 8px; font-weight: bold; }
+.footer-hr + h4 + p { margin-bottom: 0 !important; }
+
+#actions { position: relative; z-index: 1; }
 
 :is(a, button, input):focus-visible { outline: 3px solid rgba(214, 173, 53, 0.8); outline-offset: 4px; }
 
 /* Signature Fallback Styles (in case Tailwind doesn't render) */
-.signature-divider { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-top: 40px; margin-bottom: 10px; }
+.signature-divider { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-top: 30px; margin-bottom: 5px; }
 .sig-line { display: block; width: 2rem; height: 1px; background-color: #334155; }
 .sig-text { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; }
 .sig-brand { font-size: 0.75rem; color: #64748b; letter-spacing: 0.025em; }
